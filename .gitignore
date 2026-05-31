@@ -1,0 +1,37 @@
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ignore images and PDFs
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.bmp
+*.ico
+*.tif
+*.tiff
+*.psd
+*.ai
+*.eps
+*.pdf
+
+# Common asset directories
+/images/
+/assets/images/
+/uploads/
