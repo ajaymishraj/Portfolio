@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
       content="Web Developer and B.Tech AI student at NIET, Greater Noida. Built and deployed Bunkoo Meter (500+ users), Finacy, and NIET Lost & Found — production-grade Firebase web tools. Skilled in DSA, Generative AI, Prompt Engineering, and privacy-first architecture."
@@ -36,13 +37,7 @@
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
       // Your Firebase configuration
-      const firebaseConfig = {
-        apiKey: "API key",
-        .
-        .
-        .
-        etc
-      };
+
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
@@ -779,6 +774,43 @@
       body.mobile-perf-mode.light-theme #mobile-menu {
         background-color: #f8f9fc;
       }
+
+      /* Hero Animated Gradient Blobs */
+      .hero-blob-container {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+      }
+      body.light-theme .hero-blob-container {
+        opacity: 0.35;
+      }
+      @keyframes blob-1 {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(50px, 30px) scale(1.1); }
+        66% { transform: translate(-20px, 50px) scale(0.95); }
+      }
+      @keyframes blob-2 {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(-30px, -50px) scale(0.9); }
+        66% { transform: translate(40px, 20px) scale(1.1); }
+      }
+      @keyframes blob-3 {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(20px, -20px) scale(1.05); }
+        66% { transform: translate(-40px, -30px) scale(0.95); }
+      }
+      .animate-blob-1 { animation: blob-1 25s infinite alternate ease-in-out; }
+      .animate-blob-2 { animation: blob-2 30s infinite alternate ease-in-out; }
+      .animate-blob-3 { animation: blob-3 20s infinite alternate ease-in-out; }
+
+      /* Light Theme timeline border override */
+      body.light-theme .border-gray-700 {
+        border-color: rgba(0, 0, 0, 0.15) !important;
+      }
     </style>
   </head>
   <body>
@@ -986,15 +1018,22 @@
 
     <section
       id="home"
-      class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 pb-16"
+      class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24 pb-16 relative"
       role="main"
       aria-labelledby="hero-title"
     >
+      <!-- Hero Gradient Blobs background -->
+      <div class="hero-blob-container">
+        <div class="absolute w-[45vw] h-[45vw] rounded-full bg-cyan-500/10 blur-[130px] -top-[10%] -left-[10%] animate-blob-1"></div>
+        <div class="absolute w-[40vw] h-[40vw] rounded-full bg-purple-500/10 blur-[130px] bottom-[10%] -right-[5%] animate-blob-2"></div>
+        <div class="absolute w-[35vw] h-[35vw] rounded-full bg-pink-500/5 blur-[110px] top-[35%] left-[25%] animate-blob-3"></div>
+      </div>
+
       <h1
         id="hero-title"
         data-aos="zoom-out"
         data-aos-duration="1500"
-        class="text-4xl sm:text-6xl md:text-9xl font-black mb-4 tracking-tighter hero-gradient-text"
+        class="text-4xl sm:text-6xl md:text-9xl font-black mb-4 tracking-tighter hero-gradient-text relative z-10"
         style="padding-bottom: 9px"
       >
         Ajay Mishra
@@ -1002,14 +1041,14 @@
       <p
         data-aos="fade-up"
         data-aos-delay="300"
-        class="text-xl md:text-2xl text-gray-400 max-w-2xl"
+        class="text-xl md:text-2xl text-gray-400 max-w-2xl relative z-10"
       >
         Web Developer • Firebase • Python • DSA • Generative AI
       </p>
       <p
         data-aos="fade-up"
         data-aos-delay="500"
-        class="text-lg text-gray-400 max-w-2xl mt-2"
+        class="text-lg text-gray-400 max-w-2xl mt-2 relative z-10"
       >
         I build tools that real users actually use. 500+ users across colleges, 6,300+ tracked events, and 3 live deployed projects — built with Firebase, Generative AI, and a privacy-first approach from first year of my college.
       </p>
@@ -1017,7 +1056,7 @@
       <div
         data-aos="fade-up"
         data-aos-delay="600"
-        class="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto items-center"
+        class="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto items-center relative z-10"
       >
         <a
           href="#projects"
@@ -1192,7 +1231,6 @@
             </div>
             <ul class="text-gray-400 text-sm space-y-2">
               <li>C</li>
-              <li>C++</li>
               <li>Python</li>
             </ul>
           </div>
@@ -1293,142 +1331,107 @@
     <!-- Education & Experience Section -->
     <section
       id="education"
-      class="py-16 md:py-24 px-4 md:px-10 max-w-7xl mx-auto"
+      class="py-16 md:py-24 px-4 md:px-10 max-w-6xl mx-auto"
       aria-labelledby="education-title"
     >
       <h2
         id="education-title"
-        class="text-3xl md:text-5xl font-black mb-10 md:mb-16"
+        class="text-3xl md:text-5xl font-black mb-16 text-center"
         data-aos="fade-up"
       >
         EDUCATION & <span class="text-purple-400">EXPERIENCE</span>
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-        <!-- Education -->
-        <div data-aos="fade-right">
-          <h3
-            class="text-xl font-bold text-cyan-400 mb-6 flex items-center gap-2"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l9-5-9-5-9 5 9 5z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-              ></path>
+      <!-- Timeline Container -->
+      <div class="relative overflow-hidden p-2 md:p-10 h-full">
+        <!-- Center line (Desktop only) -->
+        <div class="absolute border-opacity-20 border-gray-700 h-full border left-1/2 transform -translate-x-1/2 md:block hidden"></div>
+        <!-- Left line (Mobile only) -->
+        <div class="absolute border-opacity-20 border-gray-700 h-full border left-4 md:hidden block"></div>
+        
+        <!-- Timeline Item 1: Independent Developer (Right timeline on Desktop, full width on Mobile) -->
+        <div class="mb-12 flex justify-between items-center w-full md:flex-row-reverse flex-row relative">
+          <div class="order-1 w-5/12 md:block hidden"></div>
+          <!-- Dot Indicator -->
+          <div class="z-20 flex items-center order-1 bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.5)] w-8 h-8 rounded-full md:left-1/2 md:-translate-x-1/2 left-0 absolute">
+            <svg class="mx-auto w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
-            Education
-          </h3>
-          <div class="space-y-6">
-            <div
-              class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 glow-effect"
-            >
-              <div
-                class="flex justify-between items-start mb-2 flex-wrap gap-2"
-              >
-                <h4 class="font-bold text-lg">
-                  B.Tech — Computer Science (AI)
-                </h4>
-                <span
-                  class="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full whitespace-nowrap"
-                  >2025 — Present</span
-                >
-              </div>
-              <p class="text-gray-400 text-sm mb-1">
-                Noida Institute of Engineering & Technology (NIET), Greater
-                Noida
-              </p>
-              <p class="text-gray-500 text-xs">1st Year • AI Specialization</p>
+          </div>
+          <!-- Card Content -->
+          <div class="order-1 bg-neutral-900 border border-white/10 rounded-2xl md:w-5/12 w-full ml-10 md:ml-0 p-6 hover:border-purple-500 transition-all duration-300 glow-effect" data-aos="fade-left">
+            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+              <h4 class="font-bold text-lg">Independent Developer</h4>
+              <span class="text-xs text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full whitespace-nowrap">2025</span>
             </div>
-            <div
-              class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 glow-effect"
-            >
-              <div
-                class="flex justify-between items-start mb-2 flex-wrap gap-2"
-              >
-                <h4 class="font-bold text-lg">Higher Secondary (12th)</h4>
-                <span
-                  class="text-xs text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full whitespace-nowrap"
-                  >2025</span
-                >
-              </div>
-              <p class="text-gray-400 text-sm mb-1">
-                Indian Public School (IPS), Vrindavan
-              </p>
-              <p class="text-gray-500 text-xs">Science stream</p>
-            </div>
-            <div
-              class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 glow-effect"
-            >
-              <div
-                class="flex justify-between items-start mb-2 flex-wrap gap-2"
-              >
-                <h4 class="font-bold text-lg">High School (10th)</h4>
-                <span
-                  class="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full whitespace-nowrap"
-                  >2023 — 96.6%</span
-                >
-              </div>
-              <p class="text-gray-400 text-sm mb-1">
-                Kanha Makhan Public School (KMPS), Vrindavan
-              </p>
-              <p class="text-gray-500 text-xs">Distinction — Top performer</p>
-            </div>
+            <p class="text-gray-400 text-sm mb-2 font-medium">Self-initiated Projects</p>
+            <ul class="text-gray-500 text-xs space-y-1 list-disc list-inside">
+              <li>Bunkoo Meter — PWA attendance tracker with 500+ active users, 6,300+ events tracked, 3,100+ platform views. Features AI Insights, friends leaderboard, daily marking, and IndexedDB storage</li>
+              <li>Finacy — local-first business management system handling inventory, sales, rentals, and real-time low-stock alerts with 100% on-device data privacy</li>
+              <li>NIET Lost & Found — campus-wide lost item portal with Firestore, Firebase Storage, admin dashboard, and claim management for NIET college</li>
+              <li>Built on Firebase with privacy-first architecture and Generative AI-accelerated development</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Experience -->
-        <div data-aos="fade-left">
-          <h3
-            class="text-xl font-bold text-purple-400 mb-6 flex items-center gap-2"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              ></path>
+        <!-- Timeline Item 2: B.Tech (Left timeline on Desktop, full width on Mobile) -->
+        <div class="mb-12 flex justify-between items-center w-full md:flex-row flex-row relative">
+          <div class="order-1 w-5/12 md:block hidden"></div>
+          <!-- Dot Indicator -->
+          <div class="z-20 flex items-center order-1 bg-cyan-500 shadow-[0_0_15px_rgba(34,211,238,0.5)] w-8 h-8 rounded-full md:left-1/2 md:-translate-x-1/2 left-0 absolute">
+            <svg class="mx-auto w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
             </svg>
-            Experience
-          </h3>
-          <div class="space-y-6">
-            <div
-              class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 glow-effect"
-            >
-              <div class="flex justify-between items-start mb-2">
-                <h4 class="font-bold text-lg">Independent Developer</h4>
-                <span
-                  class="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full"
-                  >2024 — Present</span
-                >
-              </div>
-              <p class="text-gray-400 text-sm mb-2">Self-initiated Projects</p>
-              <ul class="text-gray-500 text-xs space-y-1 list-disc list-inside">
-                <li>Bunkoo Meter — PWA attendance tracker with 500+ active users, 6,300+ events tracked, 3,100+ platform views. Features AI Insights, friends leaderboard, daily marking, and IndexedDB storage</li>
-                <li>Finacy — local-first business management system handling inventory, sales, rentals, and real-time low-stock alerts with 100% on-device data privacy</li>
-                <li>NIET Lost & Found — campus-wide lost item portal with Firestore, Firebase Storage, admin dashboard, and claim management for NIET college</li>
-                <li>Built on Firebase (Auth, Hosting, Firestore, Storage) with privacy-first architecture and Generative AI-accelerated development</li>
-              </ul>
+          </div>
+          <!-- Card Content -->
+          <div class="order-1 bg-neutral-900 border border-white/10 rounded-2xl md:w-5/12 w-full ml-10 md:ml-0 p-6 hover:border-cyan-500 transition-all duration-300 glow-effect" data-aos="fade-right">
+            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+              <h4 class="font-bold text-lg">B.Tech — Computer Science (AI)</h4>
+              <span class="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full whitespace-nowrap">2025 — 2029</span>
             </div>
-            
+            <p class="text-gray-400 text-sm mb-1">Noida Institute of Engineering & Technology (NIET), Greater Noida</p>
+            <p class="text-gray-500 text-xs">1st Year • AI Specialization</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Higher Secondary (Right timeline on Desktop, full width on Mobile) -->
+        <div class="mb-12 flex justify-between items-center w-full md:flex-row-reverse flex-row relative">
+          <div class="order-1 w-5/12 md:block hidden"></div>
+          <!-- Dot Indicator -->
+          <div class="z-20 flex items-center order-1 bg-cyan-500 shadow-[0_0_15px_rgba(34,211,238,0.5)] w-8 h-8 rounded-full md:left-1/2 md:-translate-x-1/2 left-0 absolute">
+            <svg class="mx-auto w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            </svg>
+          </div>
+          <!-- Card Content -->
+          <div class="order-1 bg-neutral-900 border border-white/10 rounded-2xl md:w-5/12 w-full ml-10 md:ml-0 p-6 hover:border-cyan-500 transition-all duration-300 glow-effect" data-aos="fade-left">
+            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+              <h4 class="font-bold text-lg">Higher Secondary (12th)</h4>
+              <span class="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full whitespace-nowrap">2025</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-1">Indian Public School (IPS), Vrindavan</p>
+            <p class="text-gray-500 text-xs">Science stream</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4: High School (Left timeline on Desktop, full width on Mobile) -->
+        <div class="mb-12 flex justify-between items-center w-full md:flex-row flex-row relative">
+          <div class="order-1 w-5/12 md:block hidden"></div>
+          <!-- Dot Indicator -->
+          <div class="z-20 flex items-center order-1 bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.5)] w-8 h-8 rounded-full md:left-1/2 md:-translate-x-1/2 left-0 absolute">
+            <svg class="mx-auto w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            </svg>
+          </div>
+          <!-- Card Content -->
+          <div class="order-1 bg-neutral-900 border border-white/10 rounded-2xl md:w-5/12 w-full ml-10 md:ml-0 p-6 hover:border-purple-500 transition-all duration-300 glow-effect" data-aos="fade-right">
+            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+              <h4 class="font-bold text-lg">High School (10th)</h4>
+              <span class="text-xs text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full whitespace-nowrap">2023 — 96.6%</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-1">Kanha Makhan Public School (KMPS), Vrindavan</p>
+            <p class="text-gray-500 text-xs">Distinction — Top performer</p>
           </div>
         </div>
       </div>
@@ -1824,7 +1827,7 @@
       </h2>
 
       <p class="text-gray-400 mb-6">
-        Open to Summer 2026 web development internship opportunities. Available for collaborations on practical web tools.
+        Open to 2026 web internship opportunities. Available for collaborations on practical web tools.
       </p>
       <div
         class="bg-white/5 border border-white/10 p-8 rounded-2xl max-w-2xl mx-auto"
