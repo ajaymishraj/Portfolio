@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="google-site-verification" content="hQVJ7mOa7zxgFxrZ0AZW48F755rSomwP8smV1NHbOT0" />
     <meta
       name="description"
       content="Web Developer and B.Tech AI student at NIET, Greater Noida. Built and deployed Bunkoo Meter (500+ users), Finacy, and NIET Lost & Found — production-grade Firebase web tools. Skilled in DSA, Generative AI, Prompt Engineering, and privacy-first architecture."
@@ -23,8 +23,27 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ajxmishra1.web.app" />
-    <title>Ajay Mishra — Software Engineer &amp; Web Tools Creator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ajay Mishra — Software Engineer & Web Tools Creator</title>
+    <link rel="stylesheet" href="./styles.tailwind.css?v=1" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ajay Mishra",
+        "url": "https://ajxmishra1.web.app",
+        "sameAs": [
+          "https://github.com/ajaymishraj",
+          "https://linkedin.com/in/ajay-mishra-558a62389"
+        ],
+        "jobTitle": "Software Engineer & Web Developer",
+        "description": "Full-stack developer building production-grade Firebase web tools used by 500+ users. Creator of Bunkoo Meter, Finacy, and NIET Lost & Found.",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Noida Institute of Engineering and Technology (NIET)"
+        },
+        "knowsAbout": ["Firebase", "Web Development", "JavaScript", "DSA", "Generative AI", "Prompt Engineering"]
+      }
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
       rel="stylesheet"
@@ -37,7 +56,15 @@
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
       // Your Firebase configuration
-
+      const firebaseConfig = {
+        apiKey: "PLACEHOLDER_API_KEY",
+        authDomain: "PLACEHOLDER_AUTH_DOMAIN",
+        projectId: "PLACEHOLDER_PROJECT_ID",
+        storageBucket: "PLACEHOLDER_STORAGE_BUCKET",
+        messagingSenderId: "PLACEHOLDER_MESSAGING_SENDER_ID",
+        appId: "PLACEHOLDER_APP_ID",
+        measurementId: "PLACEHOLDER_MEASUREMENT_ID",
+      };
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
@@ -843,7 +870,7 @@
 
     <nav
       id="navbar"
-      class="fixed w-full z-50 transition-all duration-300 py-3 md:py-4 px-4 md:px-10 flex justify-between items-center"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 md:py-4 px-4 md:px-10 flex justify-between items-center"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -1089,20 +1116,19 @@
       class="py-16 md:py-24 px-4 md:px-10 max-w-7xl mx-auto"
       aria-labelledby="about-title"
     >
-      <h2 id="about-title" class="sr-only">About Ajay Mishra</h2>
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div data-aos="fade-right" class="flex justify-center">
           <div class="avatar-ring w-64 h-64 md:w-80 md:h-80 overflow-hidden">
             <img
               src="wp.jpg"
-              alt="Avatar"
+              alt="Portrait photo of Ajay Mishra"
               class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-500"
             />
           </div>
         </div>
 
         <div data-aos="fade-left">
-          <h2 class="text-4xl font-bold mb-2">About Me</h2>
+          <h2 id="about-title" class="text-4xl font-bold mb-2">About Me</h2>
           <div class="w-20 h-1 bg-purple-500 mb-6"></div>
           <p class="text-gray-300 leading-relaxed text-lg mb-6">
             I'm Ajay Mishra — a 1st-year B.Tech CSE (AI) student at NIET, Greater Noida (AKTU) and a web developer who ships tools that real users depend on. I specialize in full-stack Firebase applications, privacy-first design, and Generative AI-accelerated workflows.
@@ -1134,8 +1160,13 @@
       </div>
     </section>
 
-    <section class="py-20 bg-white/5">
+    <section
+      id="skills"
+      class="py-20 bg-white/5"
+      aria-labelledby="skills-title"
+    >
       <h2
+        id="skills-title"
         class="text-center text-4xl font-black mb-16 uppercase tracking-widest"
       >
         My Skills
@@ -1230,8 +1261,8 @@
               <h3 class="text-xl font-bold text-green-400">Languages</h3>
             </div>
             <ul class="text-gray-400 text-sm space-y-2">
-              <li>C</li>
               <li>Python</li>
+              <li>C</li>
             </ul>
           </div>
           <!-- DSA Skills -->
@@ -1508,8 +1539,13 @@
     </section>
 
     <!-- What I Do Section -->
-    <section class="py-16 md:py-20 bg-white/5">
+    <section
+      id="services"
+      class="py-16 md:py-20 bg-white/5"
+      aria-labelledby="services-title"
+    >
       <h2
+        id="services-title"
         class="text-center text-3xl md:text-4xl font-black mb-10 md:mb-16 uppercase tracking-widest"
         data-aos="fade-up"
       >
@@ -1827,7 +1863,7 @@
       </h2>
 
       <p class="text-gray-400 mb-6">
-        Open to 2026 web internship opportunities. Available for collaborations on practical web tools.
+        Open to 2026 internship opportunities. Available for collaborations on practical web tools.
       </p>
       <div
         class="bg-white/5 border border-white/10 p-8 rounded-2xl max-w-2xl mx-auto"
@@ -1918,6 +1954,7 @@
           href="https://github.com/ajaymishraj"
           target="_blank"
           class="text-gray-400 hover:text-cyan-400 transition"
+          aria-label="GitHub"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -1927,6 +1964,7 @@
           href="https://linkedin.com/in/ajay-mishra-558a62389/"
           target="_blank"
           class="text-gray-400 hover:text-cyan-400 transition"
+          aria-label="LinkedIn"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -1937,6 +1975,7 @@
         <a
           href="mailto:ajaymishraj25@gmail.com"
           class="text-gray-400 hover:text-cyan-400 transition"
+          aria-label="Email"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -1952,7 +1991,6 @@
         Built by <span class="text-gradient">Ajay Mishra</span> — pragmatic
         code, fast iteration.
       </p>
-      <p class="mt-1 text-gray-600 text-xs">&copy; 2026 All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -2243,6 +2281,7 @@
       // Close mobile menu when clicking outside
       document.addEventListener("click", (e) => {
         if (
+          !mobileMenu.classList.contains("hidden") &&
           !mobileMenu.contains(e.target) &&
           !mobileMenuButton.contains(e.target)
         ) {
@@ -2288,11 +2327,9 @@
       window.addEventListener("scroll", () => {
         const nav = document.getElementById("navbar");
         if (window.scrollY > 50) {
-          nav.classList.add("glass-nav", "py-4");
-          nav.classList.remove("py-6");
+          nav.classList.add("glass-nav");
         } else {
-          nav.classList.remove("glass-nav", "py-4");
-          nav.classList.add("py-6");
+          nav.classList.remove("glass-nav");
         }
       });
 
