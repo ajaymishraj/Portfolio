@@ -10,12 +10,12 @@
     />
     <meta
       name="keywords"
-      content="Ajay Mishra, Front-end AI Engineer, FlyRank AI, full stack developer, Firebase developer, Firestore, IndexedDB, DSA, generative AI, prompt engineering, Bunkoo Meter, printQ, Finacy, NIET Lost & Found, NIET, B.Tech AI, web tools, PWA, Groq API"
+      content="Ajay Mishra, Data Analyst, Bluestocks Fintech, Front-end AI Engineer, FlyRank AI, full stack developer, Firebase, Supabase, B.Tech AI, NIET, Bunkoo Meter, printQ, Finacy, Generative AI, Prompt Engineering, Python, C, Web Development"
     />
     <meta name="author" content="Ajay Mishra" />
     <meta
       property="og:title"
-      content="Ajay Mishra — Front-end AI Engineer & Full-Stack Developer"
+      content="Ajay Mishra — AI Engineer, Web Developer & Data Analyst"
     />
     <meta
       property="og:description"
@@ -23,7 +23,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ajxmishra1.web.app" />
-    <title>Ajay Mishra — Front-end AI Engineer & Full-Stack Developer</title>
+    <title>Ajay Mishra — AI Engineer, Web Developer & Data Analyst</title>
     <link rel="stylesheet" href="./styles.tailwind.css?v=1" />
     <script type="application/ld+json">
       {
@@ -35,13 +35,13 @@
           "https://github.com/ajaymishraj",
           "https://linkedin.com/in/ajay-mishra-558a62389"
         ],
-        "jobTitle": "Front-end AI Engineer & Full-Stack Developer",
-        "description": "Front-end AI Engineer Intern at FlyRank AI and full-stack developer building production-grade Firebase applications and AI-powered tools.",
+        "jobTitle": "AI Engineer, Full-Stack Developer & Data Analyst",
+        "description": "Front-end AI Engineer Intern at FlyRank AI, Data Analyst Intern at Bluestocks Fintech, and full-stack developer building production-grade Firebase/Supabase applications and AI-powered tools.",
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "Noida Institute of Engineering and Technology (NIET)"
         },
-        "knowsAbout": ["Firebase", "Web Development", "JavaScript", "Python", "C", "DSA", "Generative AI", "Prompt Engineering", "AI Integration"]
+        "knowsAbout": ["Firebase", "Web Development", "Full-Stack Development", "Python", "C", "DSA", "Generative AI", "Prompt Engineering", "AI Integration"]
       }
     </script>
     <link
@@ -57,7 +57,7 @@
 
       // Your Firebase configuration
       const firebaseConfig = {
-  
+
 };
 
       // Initialize Firebase
@@ -126,6 +126,47 @@
         background: rgba(34, 211, 238, 0.1);
         border-color: rgba(34, 211, 238, 0.3);
         transform: scale(1.05);
+      }
+
+      /* Premium Glassmorphism Resume Button */
+      .resume-btn-glass {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 24px;
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 9999px;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 0.875rem;
+        letter-spacing: 0.025em;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      }
+
+      .resume-btn-glass:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(34, 211, 238, 0.6);
+        color: #22d3ee;
+        box-shadow: 0 0 20px rgba(34, 211, 238, 0.3),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .resume-btn-glass:active {
+        transform: translateY(0);
+      }
+
+      .resume-btn-glass svg {
+        transition: transform 0.3s ease;
+      }
+
+      .resume-btn-glass:hover svg {
+        transform: translateY(2px);
       }
 
       /* Background Particle Canvas */
@@ -370,6 +411,45 @@
       }
 
       /* Subtle Interactive Elements */
+      .portfolio-topic-list {
+        margin-top: 0.5rem;
+        margin-left: 0;
+        padding-left: 0.8rem;
+        list-style: disc outside;
+        color: #94a3b8;
+        font-family: "Inter", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+
+      .portfolio-topic-list > li {
+        margin-bottom: 0.75rem;
+      }
+
+      .portfolio-topic-list > li strong {
+        color: #f8fafc;
+        font-weight: 700;
+      }
+
+      .portfolio-sub-list {
+        margin-top: 0.35rem;
+        margin-left: 1rem;
+        padding-left: 0.4rem;
+        list-style: circle outside;
+        color: #cbd5e1;
+        font-family: "Inter", sans-serif;
+        font-size: 0.82rem;
+        font-weight: 400;
+        line-height: 1.75;
+        opacity: 0.88;
+      }
+
+      .portfolio-sub-list li::marker {
+        color: #64748b;
+      }
+
+
       .glow-effect {
         transition: all 0.3s ease;
       }
@@ -387,167 +467,6 @@
         background-clip: text;
       }
 
-      /* Light Theme Styles */
-      body.light-theme {
-        background-color: #f8f9fc;
-        color: #1a1a2e;
-      }
-
-      /* Light theme — text colors */
-      body.light-theme .text-gray-300 {
-        color: #4a4a5a;
-      }
-      body.light-theme .text-gray-400 {
-        color: #5a5a6a;
-      }
-      body.light-theme .text-gray-500 {
-        color: #6b6b7b;
-      }
-      body.light-theme .text-gray-600 {
-        color: #888;
-      }
-
-      /* Light theme — backgrounds & cards */
-      body.light-theme .bg-neutral-900 {
-        background-color: #ffffff;
-      }
-      body.light-theme .bg-neutral-900\/50 {
-        background-color: rgba(255, 255, 255, 0.7);
-      }
-      body.light-theme .bg-white\/5 {
-        background-color: rgba(0, 0, 0, 0.03);
-      }
-      body.light-theme .bg-white\/10 {
-        background-color: rgba(0, 0, 0, 0.05);
-      }
-
-      /* Light theme — borders */
-      body.light-theme .border-white\/10 {
-        border-color: rgba(0, 0, 0, 0.1);
-      }
-      body.light-theme .border-white\/20 {
-        border-color: rgba(0, 0, 0, 0.15);
-      }
-
-      /* Light theme — navigation */
-      body.light-theme #navbar {
-        background: linear-gradient(
-          135deg,
-          rgba(248, 249, 252, 0.95),
-          rgba(240, 242, 248, 0.95)
-        );
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-      }
-      body.light-theme .glass-nav {
-        background: rgba(248, 249, 252, 0.9);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      }
-      body.light-theme .nav-link {
-        color: #4a4a5a;
-      }
-      body.light-theme .nav-link:hover {
-        background: rgba(34, 211, 238, 0.08);
-        color: #0891b2;
-      }
-
-      /* Light theme — hero */
-      body.light-theme .hero-gradient-text {
-        background: linear-gradient(
-          135deg,
-          #1a1a2e 30%,
-          #0891b2 70%,
-          #7c3aed 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      body.light-theme .text-glow-animated {
-        animation: none;
-        filter: none;
-      }
-
-      /* Light theme — buttons */
-      body.light-theme .btn-enhanced:hover {
-        box-shadow: 0 6px 24px rgba(8, 145, 178, 0.2);
-      }
-      body.light-theme .theme-toggle-modern {
-        background: rgba(0, 0, 0, 0.04);
-        border-color: rgba(0, 0, 0, 0.1);
-      }
-      body.light-theme .theme-toggle-modern:hover {
-        background: rgba(8, 145, 178, 0.1);
-        border-color: rgba(8, 145, 178, 0.3);
-      }
-
-      /* Light theme — avatar */
-      body.light-theme .avatar-ring {
-        box-shadow: 0 0 30px rgba(8, 145, 178, 0.25);
-      }
-
-
-
-      /* Light theme — glow effects */
-      body.light-theme .glow-effect:hover {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      }
-
-      /* Light theme — project cards */
-      body.light-theme .project-card {
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-      }
-      body.light-theme .project-card:hover {
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Light theme — stats pills */
-      body.light-theme .float-animation {
-        background: rgba(0, 0, 0, 0.03);
-        border-color: rgba(0, 0, 0, 0.1);
-      }
-
-      /* Light theme — footer */
-      body.light-theme footer {
-        color: #6b6b7b;
-      }
-      body.light-theme footer a {
-        color: #5a5a6a;
-      }
-      body.light-theme footer a:hover {
-        color: #0891b2;
-      }
-
-      /* Light theme — contact glow heading */
-      body.light-theme .text-glow-cyan {
-        text-shadow: none;
-        color: #0891b2;
-      }
-      body.light-theme .text-glow-purple {
-        text-shadow: none;
-        color: #7c3aed;
-      }
-
-      /* Light theme — scroll to top button */
-      body.light-theme #scroll-to-top {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      /* Light theme — mobile menu */
-      body.light-theme #mobile-menu {
-        background: rgba(248, 249, 252, 0.98);
-      }
-      body.light-theme #mobile-menu .text-gray-300 {
-        color: #3a3a4a;
-      }
-
-      /* Light theme — cursor */
-      body.light-theme .cursor-trail {
-        border-color: rgba(8, 145, 178, 0.3);
-      }
-      body.light-theme .cursor-dot {
-        background: rgba(124, 58, 237, 0.5);
-      }
 
       /* Enhanced Project Cards */
       .project-card {
@@ -783,17 +702,8 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
 
-      body.mobile-perf-mode.light-theme .glass-nav {
-        background: rgba(248, 249, 252, 0.98);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      }
-
       body.mobile-perf-mode #mobile-menu {
         background-color: #050505;
-      }
-
-      body.mobile-perf-mode.light-theme #mobile-menu {
-        background-color: #f8f9fc;
       }
 
       /* Hero Animated Gradient Blobs */
@@ -806,9 +716,7 @@
         opacity: 0.8;
         transition: opacity 0.3s ease;
       }
-      body.light-theme .hero-blob-container {
-        opacity: 0.35;
-      }
+
       @keyframes blob-1 {
         0%, 100% { transform: translate(0, 0) scale(1); }
         33% { transform: translate(50px, 30px) scale(1.1); }
@@ -828,10 +736,7 @@
       .animate-blob-2 { animation: blob-2 30s infinite alternate ease-in-out; }
       .animate-blob-3 { animation: blob-3 20s infinite alternate ease-in-out; }
 
-      /* Light Theme timeline border override */
-      body.light-theme .border-gray-700 {
-        border-color: rgba(0, 0, 0, 0.15) !important;
-      }
+
     </style>
   </head>
   <body>
@@ -912,6 +817,14 @@
           </li>
           <li role="none">
             <a
+              href="#education"
+              class="nav-link text-gray-300 hover:text-cyan-400"
+              role="menuitem"
+              >Education</a
+            >
+          </li>
+          <li role="none">
+            <a
               href="#projects"
               class="nav-link text-gray-300 hover:text-cyan-400"
               role="menuitem"
@@ -938,31 +851,27 @@
       </div>
 
       <div class="flex items-center gap-3 ml-auto md:ml-0">
-        <!-- Modern Theme Toggle -->
-        <button
-          id="theme-toggle"
-          class="theme-toggle-modern flex items-center justify-center w-10 h-10"
-          aria-label="Toggle theme"
+        <a
+          href="resume.pdf"
+          target="_blank"
+          class="resume-btn-glass"
+          aria-label="Download Resume"
         >
+          Resume
           <svg
-            id="sun-icon"
-            class="w-5 h-5 text-yellow-400"
-            fill="currentColor"
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
             <path
-              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
             />
           </svg>
-          <svg
-            id="moon-icon"
-            class="w-5 h-5 text-gray-300 hidden"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-          </svg>
-        </button>
+        </a>
       </div>
 
       <!-- Mobile Menu overlay on the left with solid blur -->
@@ -1009,6 +918,13 @@
                 href="#about"
                 class="hover:text-cyan-400 transition mobile-nav-link"
                 >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#education"
+                class="hover:text-cyan-400 transition mobile-nav-link"
+                >Education</a
               >
             </li>
             <li>
@@ -1125,10 +1041,10 @@
           <h2 id="about-title" class="text-4xl font-bold mb-2">About Me</h2>
           <div class="w-20 h-1 bg-purple-500 mb-6"></div>
           <p class="text-gray-300 leading-relaxed text-lg mb-6">
-            I'm Ajay Mishra — a 1st-year B.Tech CSE (AI) student at NIET, Greater Noida (AKTU) and a web developer who ships tools that real users depend on. I specialize in full-stack Firebase applications, privacy-first design, and Generative AI-accelerated workflows.
+            I'm Ajay Mishra — a 1st-year B.Tech CSE (AI) student at NIET, Greater Noida (AKTU) and a web developer who ships tools that real users depend on. I specialize in full-stack Firebase/Supabase applications, privacy-first design, and Generative AI-accelerated workflows.
           </p>
           <p class="text-gray-300 leading-relaxed text-lg mb-6">
-            I've built and deployed production web apps spanning attendance tracking (Bunkoo Meter with 510+ users, 3.3k+ views, 6.7k events), print queues, and business management — all from scratch using Firebase, Supabase, and Generative AI APIs.
+            I've built and deployed production web apps spanning attendance tracking (Bunkoo Meter with 510+ users, 3.3k+ views, 6.7k events), printQ, and business management — all from scratch using Firebase, Supabase, and Generative AI APIs.
           </p>
           <p class="text-gray-300 leading-relaxed text-lg mb-6">
             Beyond web development, I have built a strong foundation in Data Structures & Algorithms (C) and am actively deepening that knowledge. I prioritise lean, maintainable solutions that solve real problems without unnecessary complexity.
@@ -1139,7 +1055,7 @@
               class="bg-white/5 border border-white/10 px-6 py-3 rounded-full float-animation glow-effect"
               style="animation-delay: 0s"
             >
-              <span class="text-cyan-400 font-bold text-xl">5+ Internships</span>
+              <span class="text-cyan-400 font-bold text-lg md:text-xl">4 Internships + Simulation</span>
             </div>
             <div
               class="bg-white/5 border border-white/10 px-6 py-3 rounded-full float-animation glow-effect"
@@ -1454,60 +1370,125 @@
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        Certifications, workshops, and milestones from my development journey.
+        Internships, certifications, workshops, and milestones from my development journey.
       </p>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
         <article
           data-aos="fade-up"
-          class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 glow-effect"
+          class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 glow-effect flex flex-col h-full"
         >
-          <h3 class="text-lg font-bold text-cyan-400 mb-3">Internships</h3>
-          <p class="text-gray-400 text-sm mb-3">
-             <ul class="text-gray-500 text-xs space-y-1 list-disc list-inside">
-               <li><strong>FlyRank AI</strong> — Front-end AI Engineer Intern | Jun 2026 – Present</li>
-               <li><strong>Bluestocks Fintech</strong> — Data Analyst Intern | Jun 2026 – Present</li>
-               <li><strong>ICT Academy</strong> — AI Virtual School Intern | Jun 2026 – Present</li>
-               <li><strong>Uptricks Services Pvt. Ltd.</strong> — Python Intern | Jun 2026 – Aug 2026</li>
-               <li><strong>Amrita Devi Foundation</strong> — Social Internship | Jun 2026</li>
-               <li><strong>Deloitte Australia</strong> — Tech Job Simulation on Forage | Jun 2026 | <a style="color: #00FFFF;" href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6a2e4d9289a3502983e31040_1781549366677_completion_certificate.pdf" target="_blank">View Certificate</a><br>
-             </ul>
+          <h3 class="text-lg font-bold text-cyan-400 mb-3">Internships & Simulations</h3>
+          <p class="text-gray-500 text-xs leading-relaxed mb-3">
+            Hands-on work across AI interfaces, data analysis, Python automation, and technology consulting.
           </p>
-          <ul class="text-gray-500 text-xs space-y-1 list-disc list-inside">
-            <!-- <li>Organization or team name</li>
-            <li>Role and duration</li>
-            <li>Key responsibilities and outcomes</li> -->
+          <ul class="portfolio-topic-list text-slate-400 text-xs space-y-3">
+            <li>
+              <strong>FlyRank AI</strong> — Front-end AI Engineer Intern | Jul 2026 – Present
+
+            </li>
+            <li>
+              <strong>Bluestocks Fintech</strong> — Data Analyst Intern | Jun 2026 – Present
+              <ul class="portfolio-sub-list">
+                <li>Participating in agile delivery of tasks, and team collaboration.</li>
+                <li>Participating in daily standups, sprint planning, and project (like mutual fund analyzer) -focused implementation work.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>ICT Academy</strong> — AI Virtual School Intern | Jun 2026 – Present
+              <ul class="portfolio-sub-list">
+                <li>Currently enrolled in Data Analysis with AI and PowerBI course</li>
+                <li>Attending Daily classes, doubt sessions, assesments and assignments</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Uptricks Services Pvt. Ltd.</strong> — Python Intern | Jun 2026 – Aug 2026
+              <ul class="portfolio-sub-list">
+                <li>Built Python automation utilities and desktop tools, including Python SMTP email-sender</li>
+                <li>Delivered CLI-ready scripts and productivity tooling for real-world use.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Deloitte Australia</strong> — Tech Job Simulation on Forage | Jun 2026
+              <a style="color: #00FFFF;" href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6a2e4d9289a3502983e31040_1781549366677_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Completed a consulting-style technology simulation focused on requirement analysis, problem solving, and solution delivery.</li>
+              </ul>
+            </li>
           </ul>
         </article>
 
         <article
           data-aos="fade-up"
           data-aos-delay="80"
-          class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 glow-effect"
+          class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 glow-effect flex flex-col h-full"
         >
           <h3 class="text-lg font-bold text-purple-400 mb-3">Certifications</h3>
-          <p class="text-gray-400 text-sm mb-3">
-            Professional certifications 
-            <!-- and technical credentials. -->
+          <p class="text-gray-500 text-xs leading-relaxed mb-3">
+            Professional certifications with the core skill each one strengthened.
           </p>
-          <ul class="text-gray-500 text-xs space-y-1 list-disc list-inside">
-            <li>Master Generative AI & Generative AI tools (ChatGPT & more) | Udemy Business | March 2026 | <a style="color: #00FFFF;" href="gen ai ajay.pdf" target="_blank">View Certificate</a></li>
-            <li>Next Gen Technologies | Infosys Springboard | November 2025 | <a style="color: #00FFFF;" href="next gen ajay.pdf" target="_blank">View Certificate</a></li>
-            <li>Code Sprint 2.0 — The Power of AI Today | Reboot Club, NIET | April 2026 | <a style="color: #00FFFF;" href="https://credsverse.com/credentials/213b1486-8894-4523-b56e-ac8b429c0338" target="_blank">View Certificate</a></li>
+          <ul class="portfolio-topic-list text-slate-400 text-xs space-y-3">
+            <li>
+              <strong>Data Analytics Essentials</strong> — Cisco Networking Academy | 23 Jun 2026
+              <a style="color: #00FFFF;" href="Data_Analytics_Essentials_certificate.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Completed a rigorous 30-hour Data Analytics Essentials certification covering data transformation, relational databases, statistical analysis, and data ethics.</li>
+                <li>Developed an end-to-end analytics project using Excel, SQL, and Power BI to extract insights from raw datasets, backed by 29 practical labs.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Master Generative AI &amp; Generative AI tools (ChatGPT &amp; more)</strong> — Udemy Business | March 2026
+              <a style="color: #00FFFF;" href="gen ai ajay.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Practiced prompt engineering, GenAI tool workflows, and AI-assisted productivity with ChatGPT-style tools.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Next Gen Technologies</strong> — Infosys Springboard | November 2025
+              <a style="color: #00FFFF;" href="next gen ajay.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Explored emerging technology concepts and how modern digital systems are applied across industry use cases.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>NeoCollab Python Certification</strong> — NeoCollab | 2025
+              <a style="color: #00FFFF;" href="neocollabPython.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Completed Python fundamentals and real-world programming exercises aligned with college curriculum.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>NeoCollab DSA Certification</strong> — NeoCollab | 2025
+              <a style="color: #00FFFF;" href="neocollabDSA.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Finished algorithmic problem-solving and data structure practice as part of academic coursework.</li>
+              </ul>
+            </li>
           </ul>
         </article>
         <article
           data-aos="fade-up"
-          class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-yellow-500/50 transition-all duration-300 glow-effect"
+          class="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-yellow-500/50 transition-all duration-300 glow-effect flex flex-col h-full"
         >
           <h3 class="text-lg font-bold text-yellow-400 mb-3">Achievements & Workshops</h3>
-          <p class="text-gray-400 text-sm mb-3">
-            Actively learning and growing through workshops and community events.
+          <p class="text-gray-500 text-xs leading-relaxed mb-3">
+            Learning, leadership, and community milestones backed by certificate proofs.
           </p>
-          <ul class="text-gray-500 text-xs space-y-1 list-disc list-inside">
-            <li><strong>Internshala Student Partner Program</strong> — Won Direct Entry to the ISP Program demonstrating leadership, communication, and networking skills | June 2026 | <a style="color: #00FFFF;" href="internshala.pdf" target="_blank">View Certificate</a></li>
-            <li><strong>Code Sprint 2.0 — The Power of AI Today</strong> — Reboot Club, NIET | April 2026</li>
-            <li><strong>Claude 101 Workshop</strong> — Outskill Team | May 2026</li>
+          <ul class="portfolio-topic-list text-slate-400 text-xs space-y-3">
+            <li>
+              <strong>Internshala Student Partner Program</strong> — Direct Entry Contest | June 2026
+              <a style="color: #00FFFF;" href="internshala.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Helped 15 students apply for the ISP Program while demonstrating leadership, communication, and networking skills.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Code Sprint 2.0 — The Power of AI Today</strong> — Reboot Club, NIET | April 2026
+              <a style="color: #00FFFF;" href="https://credsverse.com/credentials/213b1486-8894-4523-b56e-ac8b429c0338" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              <ul class="portfolio-sub-list">
+                <li>Participated in an AI-focused coding sprint exploring practical applications of current AI tools and ideas.</li>
+              </ul>
+            </li>
           </ul>
         </article>
       </div>
@@ -1712,10 +1693,6 @@
               class="text-[10px] px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded"
               >IndexedDB</span
             >
-            <span
-              class="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded"
-              >JavaScript</span
-            >
           </div>
         </div>
 
@@ -1749,7 +1726,7 @@
           </ul>
           <div class="flex gap-4 mb-4">
             <a
-              href="https://bunkoo-meter.web.app"
+              href="https://ajaymishraj.github.io/PrintQ/"
               target="_blank"
               class="text-cyan-400 hover:text-cyan-300 text-sm underline"
               >Live Demo</a
@@ -1773,10 +1750,6 @@
             <span
               class="text-[10px] px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded"
               >Key Security</span
-            >
-            <span
-              class="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded"
-              >JavaScript</span
             >
           </div>
         </div>
@@ -2002,10 +1975,6 @@
               class="text-[10px] px-2 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded"
               >Firebase Storage</span
             >
-            <span
-              class="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded"
-              >JavaScript</span
-            >
           </div>
         </div>
 <!-- Finacy -->
@@ -2059,10 +2028,6 @@
               class="text-[10px] px-2 py-1 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded"
               >Firebase</span
             >
-            <span
-              class="text-[10px] px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded"
-              >JavaScript</span
-            >
           </div>
         </div>
         <!-- She Can Foundation Website -->
@@ -2115,10 +2080,6 @@
             <span
               class="text-[10px] px-2 py-1 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded"
               >Animations</span
-            >
-            <span
-              class="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded"
-              >JavaScript</span
             >
           </div>
         </div>
@@ -2205,28 +2166,6 @@
             Available for freelance projects and short-term contracts. Open to
             collaborations on practical web tools.
           </p>
-          <div class="mt-6">
-            <a
-              href="resume.pdf"
-              target="_blank"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-black font-bold rounded-full hover:opacity-90 transition shadow-lg"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                ></path>
-              </svg>
-              Download Resume
-            </a>
-          </div>
         </div>
       </div>
     </section>
@@ -2291,37 +2230,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      // Theme Toggle Functionality
-      const themeToggle = document.getElementById("theme-toggle");
-      const sunIcon = document.getElementById("sun-icon");
-      const moonIcon = document.getElementById("moon-icon");
       const body = document.body;
-
-      // Check for saved theme preference or default to dark
-      const currentTheme = localStorage.getItem("theme") || "dark";
-      if (currentTheme === "light") {
-        body.classList.add("light-theme");
-        sunIcon.classList.add("hidden");
-        moonIcon.classList.remove("hidden");
-      }
-
-      themeToggle.addEventListener("click", () => {
-        body.classList.toggle("light-theme");
-        const isLight = body.classList.contains("light-theme");
-
-        if (isLight) {
-          sunIcon.classList.add("hidden");
-          moonIcon.classList.remove("hidden");
-          localStorage.setItem("theme", "light");
-        } else {
-          sunIcon.classList.remove("hidden");
-          moonIcon.classList.add("hidden");
-          localStorage.setItem("theme", "dark");
-        }
-
-        // Re-initialize particles with theme-appropriate colors
-        if (typeof initParticles === "function") initParticles();
-      });
 
       // Enhanced Parallax Effect
       const parallaxElements = document.querySelectorAll(".parallax-element");
@@ -2646,16 +2555,8 @@
           this.size = Math.random() * 2 + 1;
           this.speedX = Math.random() * 0.5 - 0.25;
           this.speedY = Math.random() * 0.5 - 0.25;
-          const isLight = document.body.classList.contains("light-theme");
-          this.color =
-            Math.random() > 0.5
-              ? isLight
-                ? "#0891b2"
-                : "#22d3ee"
-              : isLight
-                ? "#7c3aed"
-                : "#a855f7";
-          this.opacity = isLight ? Math.random() * 0.25 : Math.random() * 0.5;
+          this.color = Math.random() > 0.5 ? "#22d3ee" : "#a855f7";
+          this.opacity = Math.random() * 0.5;
         }
         update() {
           this.x += this.speedX;
